@@ -2,7 +2,7 @@
 // async : 非同期処理（同時処理を可能にする）
 async function generateAIDocument() {
     // return "文章生成無効化"
-    const API_KEY = "AIzaSyDiu_L1LI3GwLt8L4AtquV0Eib7cIJE6b8";
+    const API_KEY = "AIzaSyDAwVJxoRuaxf44EtlurFqUs8w8WNfwEnc";
     const endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
     console.log("文章生成中...");    
