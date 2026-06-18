@@ -1,0 +1,15 @@
+{
+  "name": "typinggame",
+  "version": "1.0.0",
+  "description": "**demoです。(2026/6/5)**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.4.3"
+  }
+}

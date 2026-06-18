@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/stylesheet.css">
+    <link rel="icon" href="kinnniku_icon.png">
+    <title>タイトレ</title>    
+</head>
+<body>
+    <div class="title-container">
+        <h1>タイトレ</h1>
+        <p>～より実践的な「育成型」タイピングゲーム～</p>
+        <button class="btn start">Play</button>
+    </div>
+    <div id="loading-container" class="hidden">
+        <h1>Loading...</h1>
+    </div>
+
+    <div class="nurturing-container hidden">
+        <div class="stomach">
+            <h2>今日のノルマ</h2>
+            <div class="gauge-container">
+                <div class="fill-bar"></div>
+                <p></p>
+            </div>
+        </div>
+        <div class="muscle-image">
+            <img class="arm-base" src="./images/kinnniku.png">
+            <div class="kobu-rectangle"></div>
+            <div class="kobu-circle"></div>
+        </div>
+
+        <div class="btn-game">
+            <button class="btn game sub former">前回の結果</button>
+            <button class="btn game main">プレイ</button>
+            <button class="btn game sub nurturtotitle">タイトルに戻る</button>
+        </div>
+    </div>
+    
+    <div class="game-container hidden"> 
+        <div class="target-text">
+            <p></p>
+        </div>
+
+        <div class="main-game">
+            <p>↓文字を入力↓</p>
+            <textarea class="input-document" autofocus></textarea>
+        </div>
+    </div>
+    <div id="result-wrapper" class="hidden">
+        <h1>success</h1>
+        <div class="result-container">
+            <p>タイム:<span id="elapsed-time"></span>秒</p>
+            <p>ミスした文字数：<span id="mistake-count"></span>回</p>
+            <p>ノルマ達成度:<span class="stomach-temp"></span>%</p>
+        </div>
+        <p>お疲れさまでした！</p>
+        <div class="result-btn-container">
+            <button class="btn result sub nurtur">育成画面に戻る</button>
+            <button class="btn result main retry">もう一度遊ぶ</button>
+            <button class="btn result sub resulttotitle">タイトルに戻る</button>    
+        </div>
+    </div>
+    <script type="module" src="./src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    overflow: hidden; /*画面固定*/
+    font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+.button{
+    text-decoration: none;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.title-container{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.title-container h1{
+    padding:20px;
+    font-size: 50px;
+}
+
+.title-container p{
+    padding-bottom:15px
+}
+
+#loading-container{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#loading-container h1{
+    font-size:45px;
+}
+
+.nurturing-container {
+    height: 100vh;          /* 画面の高さいっぱいに使う */
+    padding: 20px 0;        /* 上下に少し余白を作る */
+}
+
+.stomach{
+    margin:0 auto;
+}
+
+.stomach h2{
+    text-align:center;
+    font-weight: normal;
+    font-size:22px;
+    margin:12px 0
+}
+
+.gauge-container{
+    width: 600px;
+    height: 50px;
+    margin:0 auto;
+    text-align:center;
+    background-color: rgb(180, 180, 180);
+    position:relative;
+    z-index: 0;
+}
+
+.fill-bar{
+    width:70%;
+    height:37px;
+    background-color: rgb(255, 192, 75);
+    position: absolute;
+    top: 7px;
+    /* left: 5px; */
+    z-index: 1;
+}
+
+.gauge-container p{
+    position:relative;
+    top:7px;
+    left:260px;
+    font-size:24px;
+    font-weight: bold;
+    z-index:2;
+}
+
+.muscle-image{
+    position: relative;
+    width: 520px;
+    /* 中央寄せ */
+    margin: 0 auto;
+}
+
+.arm-base{
+    /* z-indexを使うときは、必ずpositionを伴う */
+    position:relative;
+    width: 100%;
+    /* 値が大きい方が前に来る */
+    z-index: 4;
+}
+
+.kobu-rectangle {
+    position: absolute;
+    bottom: 70px;
+    left: 250px;
+    background-color:#FACDA3; 
+    
+    width: 125px;
+    /* こぶの大きさをheightで指定 */ 
+    height: 20px;
+    
+    transform-origin: bottom;
+
+    z-index: 3;
+}
+
+.kobu-circle{
+    position: absolute;
+    /* こぶの大きさをbottomで指定 */
+    bottom:10px;
+    left: 250px;
+    background-color: #FACDA3; 
+    
+    width: 125px;
+    height: 80px;
+
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.btn-game{
+    text-align: center;
+}
+
+/* ゲーム本体 */
+.game-container{
+    width: 500px;
+    height: auto;
+    margin: 100px auto;
+}
+
+.target-text{
+    display: block;
+    margin: 0 auto;
+}
+
+.target-text p{
+    padding: 20px;
+    font-size: 22px;
+}
+
+.main-game p{
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.input-document{
+    font-size: 16px;
+    padding: 0px;
+    width: 100%;
+    height: 500px;
+    resize: none;
+    outline: none;
+}
+
+.btn{
+    display: inline-block;
+    font-weight: normal;
+    border:none;
+    height:auto;
+    color:white;
+    border-radius: 4px;
+}
+
+.start{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 13px 50px;
+    background-color:rgb(105, 228, 187);
+}
+
+.game{
+    font-size: 24px;
+    background-color: rgb(171, 233, 236);
+    color: rgb(0, 0, 0);
+}
+
+/* paddingでボタンの大きさを指定すると、テキストの長さによってボタンの大きさが変わってしまう */
+.main{
+    width: 270px;
+    height: 80px;
+    margin: 0 3px;
+}
+
+.sub{
+    width: 200px;
+    height: 50px;
+}
+
+.favor{
+    width:300px;
+    height:75px;
+    margin-bottom: 15px;
+}
+
+.result{
+    font-size: 24px;
+    background-color: rgb(105, 228, 207);
+    color: rgb(0, 0, 0);
+}
+
+.retry{
+    background-color: rgb(231, 183, 176);
+}
+
+.input-document{
+    width:300px;
+    height: 100px;
+}
