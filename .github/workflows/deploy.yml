@@ -1,0 +1,42 @@
+name: Deploy Vite App to GitHub Pages
+
+on:
+  push:
+    branches: ['master']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリのコードを取得
+        uses: actions/checkout@v4
+
+      - name: Node.jsのセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: パッケージのインストール
+        run: npm install
+
+      - name: Viteのビルドを実行（ここでAPIキーを注入！）
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+        run: npm run build
+
+      - name: GitHub Pagesの準備
+        uses: actions/configure-pages@v4
+
+      - name: ビルドされた dist フォルダをアップロード
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: GitHub Pages へデプロイ
+        id: deployment
+        uses: actions/deploy-pages@v4
