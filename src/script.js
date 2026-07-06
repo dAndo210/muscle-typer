@@ -105,11 +105,12 @@ const bicepIncreasing = (stomachTemp, stomachRate) => {
     let bicepIncrease;
     // ノルマが100%になった後にプレイしても筋肉が発達しないようにする
     if(stomachRate + stomachTemp <= 100){
-        // 0.2倍
-        bicepIncrease = Math.floor(stomachTemp * 0.2);
+        // 1倍(力こぶの成長スピード)
+        const increaseRate = 1;
+        bicepIncrease = Math.floor(stomachTemp * increaseRate);
     }
     else if(stomachRate < 100 && stomachRate + stomachTemp > 100){
-        bicepIncrease = Math.floor((100 - stomachRate) * 0.2);
+        bicepIncrease = Math.floor((100 - stomachRate) * increaseRate);
     }
     else{
         return;
